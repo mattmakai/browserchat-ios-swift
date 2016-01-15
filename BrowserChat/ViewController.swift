@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var addressBar: UITextField!
+  @IBOutlet weak var webBrowser: UIWebView!
+  @IBOutlet weak var goUrlButton: UIButton!
+
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +27,12 @@ class ViewController: UIViewController {
   }
 
 
+  @IBAction func goUrl(sender: AnyObject) {
+    guard let validAddress = addressBar!.text else {
+      return
+    }
+    let url = NSURL(string: validAddress)!
+    webBrowser.loadRequest(NSURLRequest(URL: url))
+  }
 }
 
