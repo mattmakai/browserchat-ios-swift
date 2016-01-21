@@ -14,44 +14,100 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BGw-JZ-41H">
-                                <rect key="frame" x="20" y="376" width="341" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oLM-ib-ZFg">
-                                <rect key="frame" x="20" y="512" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpY-dD-hG2">
-                                <rect key="frame" x="323" y="511" width="36" height="30"/>
-                                <state key="normal" title="Send"/>
-                            </button>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kn3-1x-fvI">
-                                <rect key="frame" x="0.0" y="51" width="349" height="329"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C1n-I9-dED">
-                                <rect key="frame" x="0.0" y="20" width="308" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nld-oC-clq">
-                                <rect key="frame" x="311" y="19" width="30" height="30"/>
-                                <state key="normal" title="Go"/>
-                                <connections>
-                                    <action selector="goUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YVO-RY-o34"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kKk-BH-8E1">
+                                <rect key="frame" x="0.0" y="30" width="375" height="637"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="XoK-fB-pJA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXK-kG-VeL">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://www.fullstackpython.com/" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C1n-I9-dED">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nld-oC-clq">
+                                                        <rect key="frame" x="345" y="0.0" width="30" height="30"/>
+                                                        <state key="normal" title="Go"/>
+                                                        <connections>
+                                                            <action selector="goUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YVO-RY-o34"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="C1n-I9-dED" firstAttribute="leading" secondItem="ZXK-kG-VeL" secondAttribute="leading" constant="10" id="U6L-CE-9eL"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ZXK-kG-VeL" firstAttribute="top" secondItem="XoK-fB-pJA" secondAttribute="top" constant="5" id="Ojx-Zd-4Jb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kn3-1x-fvI">
+                                        <rect key="frame" x="0.0" y="30" width="375" height="487"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                    </webView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j4r-Vf-QHy">
+                                        <rect key="frame" x="0.0" y="517" width="375" height="120"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BGw-JZ-41H">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7k-ru-lYp">
+                                                <rect key="frame" x="0.0" y="90" width="375" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oLM-ib-ZFg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpY-dD-hG2">
+                                                        <rect key="frame" x="25" y="0.0" width="350" height="30"/>
+                                                        <state key="normal" title="Send"/>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="FFf-At-hco"/>
+                                                    <constraint firstItem="oLM-ib-ZFg" firstAttribute="leading" secondItem="v7k-ru-lYp" secondAttribute="leading" constant="10" id="gkF-8E-nlQ"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="BGw-JZ-41H" secondAttribute="trailing" constant="10" id="R19-V9-fNc"/>
+                                            <constraint firstAttribute="height" constant="120" id="y6Q-wS-x2U"/>
+                                            <constraint firstItem="BGw-JZ-41H" firstAttribute="leading" secondItem="j4r-Vf-QHy" secondAttribute="leading" constant="10" id="zL3-YI-g7W"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kn3-1x-fvI" firstAttribute="top" secondItem="XoK-fB-pJA" secondAttribute="bottom" id="05h-dg-yJF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kn3-1x-fvI" secondAttribute="trailing" id="2m1-ba-kM5"/>
+                                    <constraint firstItem="j4r-Vf-QHy" firstAttribute="leading" secondItem="kKk-BH-8E1" secondAttribute="leading" id="JTc-u6-6E3"/>
+                                    <constraint firstItem="Kn3-1x-fvI" firstAttribute="leading" secondItem="kKk-BH-8E1" secondAttribute="leading" id="dZG-UP-s1K"/>
+                                    <constraint firstAttribute="bottom" secondItem="j4r-Vf-QHy" secondAttribute="bottom" id="h4P-Fr-duO"/>
+                                    <constraint firstAttribute="trailing" secondItem="j4r-Vf-QHy" secondAttribute="trailing" id="kSp-Bo-2ch"/>
+                                    <constraint firstItem="j4r-Vf-QHy" firstAttribute="top" secondItem="Kn3-1x-fvI" secondAttribute="bottom" id="sD0-CF-c1Y"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kKk-BH-8E1" secondAttribute="trailing" id="02D-eJ-way"/>
+                            <constraint firstItem="kKk-BH-8E1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C43-xW-JP5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kKk-BH-8E1" secondAttribute="bottom" id="d4u-J4-PvT"/>
+                            <constraint firstItem="kKk-BH-8E1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="reN-oh-Pdo"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="addressBar" destination="C1n-I9-dED" id="tqc-Rg-tss"/>
                         <outlet property="goUrlButton" destination="Nld-oC-clq" id="rLY-tr-8q8"/>
