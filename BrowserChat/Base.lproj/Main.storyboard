@@ -55,7 +55,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j4r-Vf-QHy">
                                         <rect key="frame" x="0.0" y="517" width="375" height="120"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BGw-JZ-41H">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGw-JZ-41H">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,19 +65,23 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7k-ru-lYp">
                                                 <rect key="frame" x="0.0" y="90" width="375" height="30"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oLM-ib-ZFg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oLM-ib-ZFg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpY-dD-hG2">
-                                                        <rect key="frame" x="25" y="0.0" width="350" height="30"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpY-dD-hG2">
+                                                        <rect key="frame" x="335" y="0.0" width="40" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="J6h-oC-8dE"/>
+                                                        </constraints>
                                                         <state key="normal" title="Send"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="FFf-At-hco"/>
-                                                    <constraint firstItem="oLM-ib-ZFg" firstAttribute="leading" secondItem="v7k-ru-lYp" secondAttribute="leading" constant="10" id="gkF-8E-nlQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hpY-dD-hG2" secondAttribute="trailing" id="4tV-Du-9c4"/>
+                                                    <constraint firstItem="oLM-ib-ZFg" firstAttribute="leading" secondItem="v7k-ru-lYp" secondAttribute="leading" id="Iup-P5-cRt"/>
+                                                    <constraint firstItem="oLM-ib-ZFg" firstAttribute="leading" secondItem="v7k-ru-lYp" secondAttribute="leading" id="XHu-hd-U7V"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
